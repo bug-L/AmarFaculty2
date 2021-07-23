@@ -1,0 +1,135 @@
+
+.content {
+    min-height: 90vh;
+    padding: 10px; 
+    margin-top: 5px;
+}
+
+.searchbar {
+    margin-top: 10px;
+}
+
+.review-options {
+    font-size: 80%;
+    line-height: 20px;
+    backface-visibility: hidden;
+}
+
+.prof-uni-dept {
+    font-size: 80%;
+    line-height: 20px;
+}
+
+.searchbar-button-small {
+    margin-top: 10px;
+}
+
+.search-result-text {
+    font-size: 150%;
+}
+
+.search-result-icon {
+    font-size: 25px !important;
+    margin-top: 10px;
+}
+
+.search-name {
+    font-size: 100% !important;
+}
+
+.navbar {
+    border-bottom-style: solid;
+    border-bottom-color: #3A507C;
+
+}
+
+blockquote {
+    border-left: 5px solid #64dd17;
+}
+
+.search-results {
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+    border-color: #3A507C !important;
+}
+
+
+/*Reduce Navbar Height Begin*/
+nav {
+    height: 50px;
+    line-height: 50px;
+}
+
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+    height: 50px;
+    line-height: 50px;
+}
+
+nav .button-collapse i {
+    height: 50px;
+    line-height: 50px;
+}
+
+nav .brand-logo { 
+    font-size: 1.6rem; 
+}
+
+@media only screen and (min-width: 601px){
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 50px;
+        line-height: 50px;
+    }
+}
+/*Reducing Navbar Height END*/
+
+/*mobile devices container fix */
+@media (max-width: 480px) {
+    .container {
+        width: inherit;
+    }
+}
+
+/*collapsible offensive comments*/
+.offensive {
+    background-color: white;
+    color: red;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+  }
+  
+  .offensive-content {
+    padding: 0px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    text-align: left;
+  }
+
+
+  .pagination li.active {
+    background-color: #5c6bc0;
+  }
+
+  /*Alert Messages*/
+  .alert-success {
+    padding: 10px;
+    background-color: #00897b;
+    color: white;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }

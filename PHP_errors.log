@@ -1,0 +1,36 @@
+[01-Oct-2019 05:26:25 UTC] PHP Fatal error:  Uncaught ErrorException: file_put_contents(D:\Software\Wamp\www\amarguru\storage\framework\views/b1d90124b76f712770e80390aa69a2836e3e2635.php): failed to open stream: No such file or directory in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home/u62505163...', 122, Array)
+#1 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(122): file_put_contents('D:\\Software\\Wam...', '<?php $__env->s...', 0)
+#2 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(140): Illuminate\Filesystem\Filesystem->put('D:\\Software\\Wam...', '<?php $__env->s...')
+#3 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illuminate\View\Compilers\BladeCompiler->compile('/home/u625 in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 122
+[01-Oct-2019 05:26:25 UTC] PHP Fatal error:  Uncaught ErrorException: file_put_contents(D:\Software\Wamp\www\amarguru\storage\framework\views/b1d90124b76f712770e80390aa69a2836e3e2635.php): failed to open stream: No such file or directory in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home/u62505163...', 122, Array)
+#1 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(122): file_put_contents('D:\\Software\\Wam...', '<?php $__env->s...', 0)
+#2 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(140): Illuminate\Filesystem\Filesystem->put('D:\\Software\\Wam...', '<?php $__env->s...')
+#3 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illuminate\View\Compilers\BladeCompiler->compile('/home/u625 in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 122
+[01-Oct-2019 05:26:42 UTC] PHP Fatal error:  Uncaught ErrorException: file_put_contents(D:\Software\Wamp\www\amarguru\storage\framework\views/b1d90124b76f712770e80390aa69a2836e3e2635.php): failed to open stream: No such file or directory in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home/u62505163...', 122, Array)
+#1 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(122): file_put_contents('D:\\Software\\Wam...', '<?php $__env->s...', 0)
+#2 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(140): Illuminate\Filesystem\Filesystem->put('D:\\Software\\Wam...', '<?php $__env->s...')
+#3 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illuminate\View\Compilers\BladeCompiler->compile('/home/u625 in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 122
+[01-Oct-2019 05:26:42 UTC] PHP Fatal error:  Uncaught ErrorException: file_put_contents(D:\Software\Wamp\www\amarguru\storage\framework\views/b1d90124b76f712770e80390aa69a2836e3e2635.php): failed to open stream: No such file or directory in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home/u62505163...', 122, Array)
+#1 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(122): file_put_contents('D:\\Software\\Wam...', '<?php $__env->s...', 0)
+#2 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(140): Illuminate\Filesystem\Filesystem->put('D:\\Software\\Wam...', '<?php $__env->s...')
+#3 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illuminate\View\Compilers\BladeCompiler->compile('/home/u625 in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 122
+[01-Oct-2019 05:26:58 UTC] PHP Fatal error:  Uncaught ErrorException: file_put_contents(D:\Software\Wamp\www\amarguru\storage\framework\views/b1d90124b76f712770e80390aa69a2836e3e2635.php): failed to open stream: No such file or directory in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home/u62505163...', 122, Array)
+#1 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(122): file_put_contents('D:\\Software\\Wam...', '<?php $__env->s...', 0)
+#2 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(140): Illuminate\Filesystem\Filesystem->put('D:\\Software\\Wam...', '<?php $__env->s...')
+#3 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illuminate\View\Compilers\BladeCompiler->compile('/home/u625 in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 122
+[01-Oct-2019 05:26:58 UTC] PHP Fatal error:  Uncaught ErrorException: file_put_contents(D:\Software\Wamp\www\amarguru\storage\framework\views/b1d90124b76f712770e80390aa69a2836e3e2635.php): failed to open stream: No such file or directory in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home/u62505163...', 122, Array)
+#1 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(122): file_put_contents('D:\\Software\\Wam...', '<?php $__env->s...', 0)
+#2 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(140): Illuminate\Filesystem\Filesystem->put('D:\\Software\\Wam...', '<?php $__env->s...')
+#3 /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illuminate\View\Compilers\BladeCompiler->compile('/home/u625 in /home/u625051634/domains/amarguru.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 122
