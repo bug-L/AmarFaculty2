@@ -1,9 +1,9 @@
 
 @isset($avg)
 <br>
-<h6 class="grey-text text-darken-2">Reviews for {{ $professor->name }}:</h6><br>
+<h6 class="grey-text text-darken-2 center-align"><b>Reviews</b></h6><br>
 
-<ul class="collection">
+<ul class="collection white">
 
     @foreach($paginated_reviews as $review)
         
@@ -54,7 +54,7 @@
                     <span><strong>No</strong></span>
                     @endif
                 </p>
-                <a href="#!" class="secondary-content"><i class="material-icons blue-text text-darken-2 small" style="margin-top: 20px;">grade</i></a>
+                <a href="#!" class="secondary-content"><i class="material-icons red-text text-darken-3 small" style="margin-top: 20px;">grade</i></a>
                 
             </div>
         </div>
@@ -65,7 +65,7 @@
     <li class="review-description collection-item">
         @isset($review->description)
             @if($review->offensive == '1')
-            <a class="offensive"><i><b>!</b><small> This comment may be offensive/inappropriate. Click to unhide.</small></i></a>
+            <a class="offensive"><i><b>!</b><small> This comment may be offensive/inappropriate. Click to see.</small></i></a>
             <div class="offensive-content">
                 <p>{{ $review->description }}</p>
             </div>

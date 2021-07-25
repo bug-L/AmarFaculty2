@@ -15,9 +15,11 @@
 
         <meta name="description" content="Find and review teachers from Bangladeshi private universities. Search using teacher's name or initials.">
 
-        <title>{{ config('app.name', 'AmarGuru') }} - Faculty Reviews</title>
+        <title>AmarFaculty - Review University Teachers in Bangladesh</title>
 
         <link rel="icon" href="{{ asset('img/icon.png') }}">
+
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/custom.css') }}"  media="screen,projection"/>
 
         <!-- Fonts -->
         <!--MATERIALIZE: Import Google Icon Font-->
@@ -49,10 +51,20 @@
         src="https://www.facebook.com/tr?id=967974950204596&ev=PageView&noscript=1"
         /></noscript>
         <!-- End Facebook Pixel Code -->
+
+        <!--Begin custom css-->
+        <style>
+     
+
+       
+        </style>
+
+        <!--End custom css-->
+    
     </head>
-    <body style="">
+    <body class="bg">
         
-    <div class="container valign-wrapper" style="min-height: 100vh; background-image: url({{ asset('img/background.png') }})">
+    <div class="container valign-wrapper" style="min-height: 100vh;">
         <div class="row center-align">
             <div class="col s12 l8 push-l2">
                 <form action="/professors/search" method="POST" role="search">
@@ -63,14 +75,10 @@
                         </div>
                         <br>
                         
-                        <div class="input-field col s12" style="margin: 0px;">
-                            <input type="text" class="validate" id="search" name="q" minlength="3" maxlength="30" required>
-                            <label for="search">Faculty name/initials</label>
-                        </div>
-                        
-                        <div class="input-field col s8 push-s2 m6 push-m3" style="margin: 0px;">
-                            <select name="university_id" id="professor-university" required>
-                                <option value="" disabled selected>Select university</option>
+                        <div class="input-field col s8 push-s2 m6 push-m3" style="margin-bottom: 12px;">
+                            <select name="university_id" id="professor-university" required onchange="showDiv('hidden_div', this)">
+                                <option style="color: white" value="" disabled selected>Select university</option>
+                               
                                 @foreach($universities as $university)
                                 <option value="{{ $university->id }}">{{ $university->name }}</option>
                                 @endforeach
@@ -78,13 +86,17 @@
 
                         </div>
 
-                        <div class="input-field col s12">
-                            <button type="submit"  class="btn blue darken-4 m-2 waves-effect waves-light animated fadeIn delay-1s"><i class="material-icons left">search</i>FIND FACULTY</button>
+                        <div id="hidden_div">
+                            <div class="input-field col s12 animated fadeInUp" style="margin-bottom: 12px;">
+                                <input type="text" class="validate" id="search" name="q" minlength="3" maxlength="30" required onkeyup="EnableDisable(this)">
+                                <label for="search" class="black-text text-lighten-2">Teacher name/initials</label>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <button id="btnSubmit" type="submit"  class="btn red lighten-1 yellow-text text-lighten-2  m-2 waves-effect waves-light animated fadeIn delay-1s" disabled><i class="material-icons left">search</i><b>Look Up</b></button>
+                            </div>
                         </div>
-                    
-                        <div class="col s12">
-                            <a class="blue-text text-lighten-3 animated fadeIn delay-5s" href="/help">How to use?</a>
-                        </div>
+                      
                     </div>
                     
                     <div style="min-height: 40px;">
@@ -109,6 +121,26 @@
         var elems = document.querySelectorAll('select');
         var instances = M.FormSelect.init(elems);
     });
+
+    function showDiv(divId, element)
+    {
+        document.getElementById(divId).style.display = element.value != "" ? 'block' : 'none';        
+    }
+
+    function EnableDisable(txtPassportNumber) {
+        //Reference the Button.
+        var btnSubmit = document.getElementById("btnSubmit");
+ 
+        //Verify the TextBox value.
+        if (txtPassportNumber.value.length >= 3) {
+            //Enable the TextBox when TextBox has value.
+            btnSubmit.disabled = false;
+        } else {
+            //Disable the TextBox when TextBox is empty.
+            btnSubmit.disabled = true;
+        }
+    };
+
     </script>
 
     </body>

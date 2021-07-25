@@ -30,17 +30,17 @@ Search results for '{{ old('q') }}' |
                 <ul id="review-list" class="collection">
                     @foreach($professors as $professor)
                     
-                    <li class="collection-item avatar search-results">
+                    <li class="collection-item avatar search-results" style="background-image: url({{ asset('img/searchbar_background.png') }});">
                         <a href="/professors/{{ $professor->id }}">
-                        <i class="material-icons circle white search-result-icon light-green-text text-accent-4">face</i>
-                        <span class="title blue-text text-darken-4 search-name">{{ $professor->name }}</span><br>
+                        <i class="material-icons circle white search-result-icon red-text text-lighten-1">school</i>
+                        <span class="title grey-text text-darken-2 search-name">{{ $professor->name }}</span><br>
                         
-                        <p class="prof-uni-dept blue-text text-lighten-2">
+                        <p class="prof-uni-dept grey-text text-darken-1">
                             {{ $professor->department->name }},<br>
                             {{ $professor->university->name }}
                         </p>
                         
-                        <span class="secondary-content light-blue-text text-accent-4"><br><i class="material-icons">rate_review</i></span>
+                        <span class="secondary-content yellow-text text-darken-1"><br><i class="material-icons">rate_review</i></span>
                         </a>        
                     </li>
                     
@@ -51,7 +51,7 @@ Search results for '{{ old('q') }}' |
        
         <p class="red-text text-darken-4 center-align">
             <i class="material-icons" style="vertical-align: middle;">sentiment_dissatisfied</i>
-            Can't find your faculty?
+            Can't find your teacher?
             <a href="/professors/create"> Click here to add.</a>
         </p>
         
@@ -82,20 +82,12 @@ $(function(){
     $("#review-list li:even p").removeClass("text-lighten-2");
     $("#review-list li:even p").addClass("text-darken-1");
     $("#review-list li:even span").removeClass("light-blue-text text-accent-4");
-    $("#review-list li:even span").addClass("blue-text text-darken-3");
+    $("#review-list li:even span").addClass("text-darken-3");
     
     
 });
 
-//Changes searchbar 
-$( "#search" ).click(function() {
-  $("#search-icon").removeClass("grey-text");
-  $("#search-icon").addClass("green-text text-accent-4");
-});
-$( "#search" ).focusout(function() {
-  $("#search-icon").removeClass("green-text text-accent-4");
-  $("#search-icon").addClass("grey-text");
-});
+
 
 
 </script>
@@ -106,5 +98,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);
 });
+
+function EnableDisable() {
+    //Reference the Button.
+    var btnSubmit = document.getElementById("btnSubmit");
+
+    //Verify the TextBox value.
+    if (document.getElementById("search").value.length >= 3) {
+        //Enable the TextBox when TextBox has value.
+        btnSubmit.disabled = false;
+    } else {
+        //Disable the TextBox when TextBox is empty.
+        btnSubmit.disabled = true;
+    }
+};
 </script>
 @endsection

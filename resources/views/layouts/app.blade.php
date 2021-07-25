@@ -17,7 +17,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title'){{ config('app.name', 'AmarGuru') }}</title>
+    <title>@yield('title')AmarFaculty{{-- todo: config('app.name', 'AmarGuru') --}}</title>
 
     <!-- Scripts -->
     <!-- messes up collapsing offensive shit: <script src="{{ asset('js/app.js') }}" defer></script> -->
@@ -63,7 +63,7 @@
     /></noscript>
     <!-- End Facebook Pixel Code -->
 </head>
-<body >
+    <body style="background-image: url({{ asset('img/body_background.png') }}); background-size: cover;">
 
     <div id="app" >
     
@@ -78,11 +78,11 @@
     </div>
     
 
-    <footer class="page-footer blue-grey">
+    <footer class="page-footer red darken-2">
     <div class="footer-copyright">
         <div class="container white-text">
-        © 2020 AmarGuru
-        <a href="http://fb.me/AmarGuruOfficial" target="blank" class="blue-text text-lighten-5 right">              Facebook</a>
+        © 2021 AmarFaculty
+        <a href="http://fb.me/AmarFaculty" target="blank" class="blue-text text-lighten-5 right">              Facebook <i class="material-icons tiny">thumb_up</i></a>
         </div>
     </div>
     </footer>

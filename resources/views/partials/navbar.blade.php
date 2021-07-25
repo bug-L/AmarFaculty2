@@ -1,13 +1,13 @@
-<nav class="navbar blue-grey darken-2">
+<nav class="navbar">
     <div class="container">
         <div class="nav-wrapper">
             <a href="/" class="brand-logo">
-                <img src="{{ asset('img/amarguru_logo_w.png') }}" style="width:140px; height:auto;" alt="AmarGuru">
+                <img src="{{ asset('img/navbar_logo.png') }}" style="width:140px; height:auto;" alt="AmarGuru">
             </a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger white-text"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger grey-text text-darken-2"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
 {{--                <li><a href="/" class="white-text" ><i class="material-icons left">business</i>Universities</a></li>--}}
-                <li><a href="/help" class="white-text" ><i class="material-icons left">help_outline</i>Help</a></li>
+                <li><a href="/help" class="grey-text text-darken-1" ><i class="material-icons left">help_outline</i>Help</a></li>
                 @auth  
                 <li>
                 <a href="{{ route('logout') }}" class="white-text"
