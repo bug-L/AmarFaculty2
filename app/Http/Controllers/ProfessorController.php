@@ -144,6 +144,7 @@ class ProfessorController extends Controller
         //19. show function done
         $professor = Professor::find($professor->id);
 
+        $universities = University::all();  //needed for searchbar
         //24. 
         //get reviews for this professor (add approved later)->where('approved', 0)
         
@@ -153,6 +154,7 @@ class ProfessorController extends Controller
                         ['professor_id', $professor->id],
                         //96. a) commented out approved until website is well established ['approved', '1']
                                 ])->get();
+
         
         //25. if there are reviews then pass additional variables to show.blade view 
         //such as avg rating and take again pct
@@ -185,18 +187,22 @@ class ProfessorController extends Controller
                                         ['professor_id', $professor->id],
                                         //96. b) Commented out approved. ['approved', '1']
                                             ])->orderBy('id', 'desc')->paginate(10);
+
+            
             
             return view('professors.show', ['professor'=>$professor,
                                             'avg'=>$avg,
                                             'paginated_reviews'=>$paginated_reviews,
                                             'take_again_pct'=>$take_again_pct,
                                             'mandatory_pct'=>$mandatory_pct,    //122. continued
-                                            'approved_count'=>$reviews->count()]);
+                                            'approved_count'=>$reviews->count(),
+                                            'universities'=>$universities]);
 
         }
 
         //no reviews posted, so just send professor
-        return view('professors.show', ['professor'=>$professor]);
+        return view('professors.show', ['professor'=>$professor,
+                                        'universities'=>$universities]);
         
         
     }

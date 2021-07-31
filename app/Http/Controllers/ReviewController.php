@@ -89,7 +89,7 @@ class ReviewController extends Controller
         if (Review::where('user_ip', $user_ip)->where('course_code', $course_code)->where('professor_id', $professor_id)->exists()) {
             $professor = Professor::find($professor_id);
             $request->session()->flash('alert-success', 'Review posted successfully!');
-            return redirect()->route('professors.show', ['professor'=>$professor,]);
+            return redirect()->route('professors.show', ['professor'=>$professor]);
         }
 
         //end 136.

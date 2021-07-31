@@ -74,6 +74,8 @@ for (i = 0; i < coll.length; i++) {
     @endif
     @endforeach
 
+    @include('partials.searchbar')
+
     @include('partials.profile')
 
     @include('partials.reviews')

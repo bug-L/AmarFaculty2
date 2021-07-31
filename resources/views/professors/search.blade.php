@@ -98,19 +98,5 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);
 });
-
-function EnableDisable() {
-    //Reference the Button.
-    var btnSubmit = document.getElementById("btnSubmit");
-
-    //Verify the TextBox value.
-    if (document.getElementById("search").value.length >= 3) {
-        //Enable the TextBox when TextBox has value.
-        btnSubmit.disabled = false;
-    } else {
-        //Disable the TextBox when TextBox is empty.
-        btnSubmit.disabled = true;
-    }
-};
 </script>
 @endsection

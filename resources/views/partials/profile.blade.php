@@ -18,14 +18,14 @@
 
             
             <div class="card-content hide-on-med-and-up">
-                <h6 class="red-text text-darken-2"><strong>Faculty Report</strong></h6>
+                <h6 class="red-text text-darken-2"><strong>Report</strong></h6>
                 <div style="text-align: center; vertical-align: middle;">
                     <span class="card-title red-text text-darken-2" style="margin-top: 90px;">Open<br><br>
                     <button class="btn-floating btn  red lighten-1 pulse activator"><i class="material-icons yellow-text text-lighten-1">drafts</i></a></span>
                 </div>
             </div>
             <div class="card-content hide-on-small-only">
-                <h3 class="red-text text-darken-2"><strong>Faculty Report</strong></h3>
+                <h3 class="red-text text-darken-2"><strong>Report</strong></h3>
                 <div style="text-align: center; vertical-align: middle;">
                     <span class="card-title red-text text-darken-2" style="margin-top: 90px;"><h4>Open</h4><br>
                     <button class="btn-large btn-floating btn red lighten-1 pulse activator"><i class="large material-icons yellow-text text-lighten-1">drafts</i></a></span>
@@ -36,7 +36,7 @@
     </div>
     <div class="card-reveal">
         
-        <span class="card-title grey-text text-darken-2"><h4>Faculty Report<i class="material-icons right">close</i></h4></span>
+        <span class="card-title grey-text text-darken-2"><h4>Report<i class="material-icons right">close</i></h4></span>
         <hr>
     @isset($avg)
     
@@ -61,14 +61,14 @@
                 <span style="font-size: 85%; border-radius: 25px;" class="blue darken-3 white-text animated jackInTheBox delay-1s"><strong><i>  Off the charts!  </i></strong></span>
             @endif
         </div>
+        <h5><small>Score: </small><strong>{{ $avg }}</strong><small> / 5.0</small></h5>
         <h5><small>Total Reviews: </small><strong>{{ $approved_count }}</strong></h5>
-        <h5><small>Overall Score: </small><strong>{{ $avg }}</strong><small> / 5.0</small></h5>
         <p>
-            <h5><b>{{ $take_again_pct }}%</b><small> recommended taking this faculty.</small></h5>
+            <h5><b>{{ $take_again_pct }}%</b><small> recommended this teacher.</small></h5>
             <div class="progress">
                 <div class="determinate" style="width: {{ $take_again_pct }}%"></div>
             </div>
-            <h5><b>{{ $mandatory_pct }}%</b><small> suggested attendance was important.</small></h5>
+            <h5><b>{{ $mandatory_pct }}%</b><small> said attendance was important.</small></h5>
             <div class="progress red lighten-3">
                 <div class="determinate red darken-3" style="width: {{ $mandatory_pct }}%"></div>
             </div>
@@ -102,7 +102,7 @@
 
     <!-- Your share button code -->
     <div class="fb-share-button"
-        data-href="http://www.amarguru.com/professors/{{ $professor->id }}" 
+        data-href="http://www.amarfaculty.com/professors/{{ $professor->id }}" 
         data-layout="button"
         data-size="large">
     </div>
