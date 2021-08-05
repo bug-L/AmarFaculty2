@@ -31,6 +31,7 @@ class ReviewController extends Controller
             //66. Paginated reviews.
             $reviews = Review::orderBy('id', 'desc')->paginate(50);
 
+         
             //123. Additional Review Information:
             $review_count = Review::count();
             $five_count = Review::where('rating', '5')->count();
@@ -40,7 +41,7 @@ class ReviewController extends Controller
             $one_count = Review::where('rating', '1')->count();
 
             //135. distinct ip count 4-8-20
-            $unique_count = DB::table('reviews')->distinct('user_ip')->count('user_ip');
+            $unique_count = Review::distinct('user_ip')->count('user_ip');
 
             return view('reviews.index', ['reviews'=>$reviews,
                                         'review_count'=>$review_count,
@@ -107,24 +108,11 @@ class ReviewController extends Controller
         ]);
 
         if($reviewCreate) {
-            /*
-            $professor = Professor::find($prof_id);
-            return redirect()->route('professors.show', ['professor'=>$professor]);
-            */
-
-            //64. Redirect to thankyou page:
-            //return view('reviews.thankyou');
 
             $professor = Professor::find($request->input('professor_id'));
             $request->session()->flash('alert-success', 'Review posted successfully!');
             return redirect()->route('professors.show', ['professor'=>$professor,]);
-            
-            //98. Added highlighted review
-            /*return redirect()->route('professors.show', ['professor'=>$professor])->with(
-                                        'highlighted_review', $reviewCreate);
-            return redirect('professors.show', ['professor'=>$professor,
-                                            'highlighted_review'=>$reviewCreate]);
-            */
+           
         }
 
         return redirect()->back()->withInput()->withErrors(['error'=>'An unknown error occured. Please try again later.']);

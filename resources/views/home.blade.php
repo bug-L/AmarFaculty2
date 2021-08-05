@@ -21,6 +21,7 @@
                     <ul>
                         <li><a href='/reviews/approve'>Approve Reviews</a></li>
                         <li><a href='/professors/approve'>Approve Professors</a></li>
+                        <li><a href='/queries'>Queries</a></li>
                         <li><a href='/professors'>View all Professors</a></li>
                         <li><a href='/reviews'>View all Reviews</a></li>
                         <li><a href='/universities'>View all Universities</a></li>

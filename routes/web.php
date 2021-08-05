@@ -11,17 +11,14 @@
 |
 */
 
+Route::get('/queries', 'HomeController@queries');
 //120b. Added sort route
 Route::get('/professors/sort', 'ProfessorController@sort');
-
-//105. Added route to add initials
-//Route::get('/addInitials', 'ProfessorController@addInitials');
 
 Route::get('/', function () {
     //131. Send Universities for search purposes
     $universities = App\University::all();
     return view('welcome', ['universities'=>$universities]);
-
 });
 
 //99. Added route to department_university.blade.php

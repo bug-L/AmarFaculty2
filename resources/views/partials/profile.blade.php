@@ -51,7 +51,7 @@
             @elseif ($avg < 4)
                 <a style="font-size: 250%" class="btn-large btn-floating yellow black-text animated heartBeat"><strong>B</strong></a><br><br>
                 <span style="font-size: 85%; border-radius: 25px;" class="yellow lighten-2 black-text animated jackInTheBox delay-1s"><strong><i>  Good  </i></strong></span>
-            @elseif ($avg < 4.9)    
+            @elseif ($avg < 4.7)    
                 <a style="font-size: 250%" class="btn-large btn-floating teal darken-3 animated heartBeat"><strong>A</strong></a><br><br>
                 <span style="font-size: 85%; border-radius: 25px;" class="teal darken-3 white-text animated jackInTheBox delay-1s"><strong><i>  Amazing  </i></strong></span><br>
             @else

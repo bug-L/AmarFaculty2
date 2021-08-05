@@ -9,6 +9,7 @@ use App\Department;
 use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;    //31. import
+use DB;
 
 class ProfessorController extends Controller
 {
@@ -48,16 +49,6 @@ class ProfessorController extends Controller
     public function create()
     {
 
-        //Attach dept to uni:
-        /*
-        if (Auth::check()) {
-            $deptIds = [66,67,68,51,69,70,71,40,6,72,39,73,74,75,76,77,78,23,79,14,48,12,80,81];
-            University::find('5')->departments()->attach($deptIds);
-            return 'succes';
-        }
-        
-        */
-
         //126. New Create function with hasMany relations in mind between uni and dept:
         $uni_dept = array();
 
@@ -81,16 +72,6 @@ class ProfessorController extends Controller
         return view('professors.create', ['uni_dept'=>$uni_dept]);
         //END 126
 
-        /*127. Commented out old Create code:
-        //34. get all universities and departments to pass to our view.
-        $universities = University::all();
-
-        //122. Sort By Name:
-        $departments = Department::all()->sortBy('name');
-        return view('professors.create', ['universities'=>$universities,
-                                            'departments'=>$departments]);
-        */                   
-        
     }
 
     /**
@@ -303,19 +284,30 @@ class ProfessorController extends Controller
      */
     public function search(Request $request)
     {
-        // $q stands for query
-        $q = $request->input('q');
-        //133a. Included university id
+        $q = $request->input('q');  //get query
+
         $university_id = $request->input('university_id');
-        //133a END
+
         $professors = Professor::where('university_id', $university_id) //133b. Added university id
                                 ->where('name', 'like', '%'.$q.'%')
                                 ->orWhere('university_id', $university_id)
                                 ->where('initials', $q) //104. Added orWhere
                                 ->get();
         $universities = University::all();
+       
 
-        //121. FlashInput Request Before Returning To Search Page so u can see old('q')
+        //store query to db
+        if (!Auth::check()) {
+            $ip = $request->ip(); //user ip address
+            $created_at = \Carbon\Carbon::now();
+            $count = count($professors);
+            DB::table('queries')->insert(
+                ['query' => $q, 'university_id' => $university_id, 'match_count' => $count,
+                'user_ip' => $ip, 'created_at' => $created_at ]
+            );
+        }
+        
+        //121. FlashInput Request Before Returning To Search Page so u can retrieve query after redirect
         session()->flashInput($request->input());
         
         return view('professors.search', [  'professors'=>$professors,
@@ -437,19 +429,7 @@ class ProfessorController extends Controller
         
         //130 End
 
-       
-        /*129. Commented out old function
-        if (Auth::check()) {
-            $departments = Department::all();
-            $universities = University::all();
-            return view('professors.masscreation', [
-                                    'departments'=>$departments,
-                                    'universities'=>$universities
-            ]);
-        }
-        return redirect('');
-
-        */
+ 
     }
 
     //83. added masscreate function to process masscreation
